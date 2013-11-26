@@ -1,0 +1,309 @@
+$highlight: #fff;
+$highlight2: #c5c6ec;
+$highlight3: #a1a5e8;
+$background: #000;
+/** CATEGORY COLOURS */
+$general-col: #28023f;
+$drupalisms-col: #7c0f2e;
+$modules-col: #116241;
+$finally-col: #083f0c;
+$shadow: rgba(37, 0, 3, 0.54);
+
+.deck-container, .deck-container select, .deck-container input, .deck-container textarea {
+  color: $highlight;
+}
+
+.deck-container {
+  font-family: "Avenir", "Helvetica Neue", sans-serif;
+  letter-spacing: 2px;
+  text-shadow: $shadow 1px 1px;
+  font-size:1.75em;
+  background: $background;
+  color: $highlight;
+
+  .slide {
+    background: $background;
+
+    h1, h2 {
+    }
+
+    h1 {
+      color:$highlight;
+      text-shadow: $shadow 6px 6px;
+    }
+
+    h2 {
+      color: $highlight;
+      border-bottom-color:#ccc;
+      text-shadow: $shadow 3px 3px;
+    }
+
+    h3 {
+      color: $highlight;
+    }
+
+    pre {
+      border-color:#ccc;
+    }
+
+    code {
+      color:#fff;
+      background-color: #000000;
+      padding: 0.5em 0.3em;
+      margin-left: 10px;
+    }
+
+    blockquote {
+      font-size:2em;
+      font-style:italic;
+      padding:1em 2em;
+      border-left:5px solid #ccc;
+
+      p {
+        margin:0;
+      }
+
+      cite {
+        font-size:.5em;
+        font-style:normal;
+        font-weight:bold;
+        color:#888;
+      }
+    }
+
+    ::-moz-selection{ background: $highlight; color:#fff; }
+    ::selection { background: $highlight; color:#fff; }
+
+    a {
+      &, &:hover, &:focus, &:active, &:visited {
+        color: $highlight2;
+        text-decoration:none;
+      }
+
+      &:hover, &:focus {
+        color: $highlight3;
+        text-decoration:underline;
+      }
+    }
+  }
+
+  > .slide {
+    .deck-before, .deck-previous {
+      opacity:0.4;
+
+      &:not(.deck-child-current) {
+        .deck-before, .deck-previous {
+          opacity:1;
+        }
+      }
+    }
+
+    .deck-child-current {
+      opacity:1;
+    }
+  }
+
+  .deck-prev-link, .deck-next-link {
+    background:#ccc;
+    font-family:serif; // sans-serif arrows x-browser fail
+
+    &, &:hover, &:focus, &:active, &:visited {
+      color:$highlight3;
+    }
+
+    &:hover, &:focus {
+      background: $highlight;
+      text-decoration:none;
+    }
+  }
+
+  .deck-status {
+    font-size:0.6666em;
+  }
+
+  &.deck-menu {
+    .slide {
+      background:#eee;
+    }
+
+    .deck-current, .no-touch & .slide:hover {
+      background:#ddf;
+    }
+  }
+}
+
+
+/**
+ * Category Specific
+ **/
+.deck-container .slide {
+  .category {
+    float: right;
+    right: 60px;
+    top: 20px;
+    margin-bottom: 0;
+    position:absolute;
+    color: $highlight;
+    text-shadow: $shadow 1px 1px;
+  }
+
+  &.cat-general {
+//      background: $general-col;
+  }
+
+  &.cat-modules {
+//    background: $modules-col;
+  }
+
+  &.cat-drupalisms {
+//    background: $drupalisms-col;
+  }
+
+  &.cat-finally {
+//    background: $finally-col;
+  }
+}
+
+/**
+ * Slide Specific
+ **/
+.deck-container .slide {
+  &.main-title {
+    h1 {
+      font-size: 3em;
+      text-align: left;
+      background: rgba(0,0,0,0.8);
+        top: 3em;
+
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border: none;
+      position: absolute;
+      top: 60%;
+    }
+  }
+  &.title {
+    h1 {
+      font-size: 3em;
+      text-align: left;
+      background: rgba(0,0,0,0.8);
+      top: 1.4em;
+      bottom: auto;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border: none;
+      position: absolute;
+      top: 60%;
+    }
+  }
+
+}
+
+
+
+.deck-container section.slide.coding-standards {
+}
+
+.deck-container section {
+  box-shadow: inset 5000px 5000px rgba(0,0,0,0.7);
+  &.title {
+    box-shadow: none;
+  }
+}
+
+.deck-container section.slide{
+  &.quote {
+    background: url('../../images/quote.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/bensutherland/9775724251/
+  }
+  &.coding-standards {
+    background: url('../../images/standard-sign.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/crdot/6827236335
+  }
+  &.commits {
+    background: url('../../images/commit-no-nuisance2.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/beglen/151603155
+
+  }
+  &.comments {
+    background: url('../../images/comments.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/lobsterboy1980/3565047496
+  }
+  &.commented-code {
+    background: url('../../images/commented-out.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/jimmybyrum/955680366
+  }
+  &.field-collection {
+    background: url('../../images/field-collection.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/wonderlane/3073143387
+    h1 {
+      top: 1.4em;
+      bottom: auto;
+    }
+  }
+  &.workflow {
+    background: url('../../images/workflow.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/stevendepolo/4550903693
+  }
+  &.date {
+    background: url('../../images/date.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/joelanman/366190064
+  }
+  &.module-things {
+    background: url('../../images/module-things.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/37709691@N05/4852805286/
+  }
+  &.hacking-core {
+    background: url('../../images/hack-core2.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/kubina/2091368266
+    //http://www.flickr.com/photos/meddygarnet/3451581786
+    h1 {
+      top: 1.4em;
+      bottom: auto;
+    }
+  }
+  &.contrib {
+    background: url('../../images/contrib.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/jasonparis/4788901592
+    //http://www.flickr.com/photos/97335141@N00/4246961572
+  }
+  &.admin-area {
+    background: url('../../images/admin-area2.jpg') 50% 50% no-repeat fixed;
+    //http://www.flickr.com/photos/94418464@N08/9487513029
+    //http://www.flickr.com/photos/35565491@N03/3292423645
+  }
+  &.questions {
+    p {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 60%;
+      margin-left: -48px;
+    }
+  }
+  background-size: 100% !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.slide li {
+  margin-bottom: 0.4em;
+}
+
+.slide ul > li {
+  margin-bottom: 1em;
+}
+
+p.source {
+  font-size: 0.5em;
+  position:absolute;
+  bottom: 0;
+  left: 2em;
+  background-color: rgba(0,0,0,0.7);
+}

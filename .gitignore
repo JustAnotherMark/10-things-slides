@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache/
+progress/
+deck2png.js
+png2pdf.js
+*.pdf
+*.txt
+*.md
+.idea

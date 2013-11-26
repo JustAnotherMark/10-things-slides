@@ -1,0 +1,507 @@
+<!-- SECTIONS -->
+<!--
+Coding Standards
+Commit Size
+Bad Commenting
+Field Collection
+Workfow
+Date
+Module Things
+Hacking Core
+Contrib
+Admin Area
+My Code
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>10 Things I Hate About [Drupal] Code - Mark Jones</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="themes/style/10things.css">
+
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+	
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide main-title">
+	<h1>10 Things I Hate About [Drupal] Code</h1>
+    <h2>Mark Jones<br />@JustAnotherMark</h2>
+</section>
+
+<section class="slide quote">
+    <p class="category">Intro</p>
+    <h2>Why did I tell you that?</h2>
+    <blockquote>
+        <p>"…criticism without risk to the critic has no value whatsoever…"</p>
+        <footer><cite>Mark Kermode - Hatchet Job</cite></footer>
+    </blockquote>
+    <p class="source"><a href="http://www.flickr.com/photos/bensutherland/9775724251/">http://www.flickr.com/photos/bensutherland/9775724251/</a></p>
+</section>
+
+<!--
+<section class="slide disclaimer">
+    <div class="background">
+        <p class="category">Intro</p>
+        <h2>Disclaimer</h2>
+        <p>If you agree with everything I say then you're doing it wrong.</p>
+    </div>
+</section>
+-->
+
+
+<section class="slide intro">
+    <p class="category">Intro</p>
+	<h2>Things That Annoy Me</h2>
+    <ol>
+        <li>General</li>
+        <li>Drupal Modules</li>
+        <li>Drupalisms</li>
+        <li>Finally</li>
+    </ol>
+</section>
+
+<!--  GENERAL  -->
+<!--  Coding Standards  -->
+<section id="coding-standards-1" class="slide coding-standards cat-general title">
+    <p class="category">General</p>
+    <h1>1. Coding Standards</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/crdot/6827236335">http://www.flickr.com/photos/crdot/6827236335</a></p>
+</section>
+
+
+<section id="coding-standards-2" class="slide coding-standards cat-general">
+    <p class="category">General</p>
+    <h2>1. Coding Standards</h2>
+    <ul>
+        <li>Understanding</li>
+        <li>Consistency</li>
+        <li>Collaboration</li>
+    </ul>
+</section>
+
+<section id="coding-standards-3" class="slide coding-standards cat-general">
+    <p class="category">General</p>
+    <h2>1. Coding Standards</h2>
+    <ul>
+        <li>Read drupal.org
+            <ul>
+                <li><a href="https://drupal.org/coding-standards">https://drupal.org/coding-standards</a></li>
+            </ul>
+        </li>
+        <li>Use Codesniffer & git hooks
+            <ul>
+                <li><a href="https://drupal.org/project/drupalcs">https://drupal.org/project/drupalcs</a></li>
+                <li><a href="https://drupal.org/project/dcq">https://drupal.org/project/dcq</a></li>
+                <li><a href="http://git-scm.com/book/en/Customizing-Git-Git-Hooks">http://git-scm.com/book/en/Customizing-Git-Git-Hooks</a></li>
+            </ul>
+        </li>
+        <li>Raise issues & make patches</li>
+    </ul>
+</section>
+
+<!--  Commit Size -->
+<section id="commits-1" class="slide commits cat-general title">
+    <p class="category">General</p>
+    <h1>2. Commit Size</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/beglen/151603155">http://www.flickr.com/photos/beglen/151603155</a></p>
+</section>
+
+<section id="commits-2" class="slide commits cat-general">
+    <p class="category">General</p>
+    <h2>2. Commit Size</h2>
+    <ul>
+        <li>How to undo a problem commit?</li>
+        <li>Where is the bug?</li>
+        <li>When did the build break?</li>
+    </ul>
+</section>
+
+<section id="commits-3" class="slide commits cat-general">
+    <p class="category">General</p>
+    <h2>2. Commit Size</h2>
+    <ul>
+        <li>Use <code>git add -p</code></li>
+        <li>Standardise message format</li>
+        <li>Reference task/bug in message</li>
+    </ul>
+</section>
+
+<!--  Bad Commenting  -->
+<section id="comments-1" class="slide comments cat-general title">
+    <p class="category">General</p>
+    <h1>3. Bad Commenting</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/lobsterboy1980/3565047496">http://www.flickr.com/photos/lobsterboy1980/3565047496</a></p>
+</section>
+
+<section id="comments-2" class="slide comments cat-general">
+    <p class="category">General</p>
+    <h2>3. Bad Commenting</h2>
+    <ul>
+        <li>Why did they do that?</li>
+        <li>Why did I do that?</li>
+        <li>Commented out code</li>
+    </ul>
+</section>
+
+<section id="comments-3" class="slide comments cat-general">
+    <p class="category">General</p>
+    <h2>3. Bad Commenting</h2>
+    <ul>
+        <li>Complete all DocBlocks</li>
+        <li>Set up auto-complete</li>
+        <li>Document anything unusual</li>
+        <li>Version control branches</li>
+        <li>Code completion tools</li>
+        <li>Patch contrib!</li>
+    </ul>
+</section>
+
+<!--  MODULES  -->
+<!--  Field Collection  -->
+<section id="field-collection-1" class="slide field-collection cat-modules title">
+    <p class="category">Modules</p>
+    <h1>4. Field Collection</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/wonderlane/3073143387">http://www.flickr.com/photos/wonderlane/3073143387</a></p>
+</section>
+
+<section id="field-collection-2" class="slide field-collection cat-modules">
+    <p class="category">Modules</p>
+    <h2>4. Field Collection</h2>
+    <ul>
+        <li>Mostly works</li>
+        <li>Hard work when it doesn't</li>
+        <li>Unnecessary complication</li>
+    </ul>
+</section>
+
+<section id="field-collection-3" class="slide field-collection cat-modules">
+    <p class="category">Modules</p>
+    <h2>4. Field Collection</h2>
+    <ul>
+        <li>Custom entity/node type</li>
+        <li>Entity reference</li>
+        <li>Inline Entity Form<ul><li><a href="https://drupal.org/project/inline_entity_form">https://drupal.org/project/inline_entity_form</a></li></ul></li>
+        <li>More reliable, consistent & Drupal-y</li>
+    </ul>
+</section>
+
+<!--  Workflow  -->
+<section id="workflow-1" class="slide workflow cat-modules title">
+    <p class="category">Modules</p>
+    <h1>5. Workflow</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/stevendepolo/4550903693">http://www.flickr.com/photos/stevendepolo/4550903693</a></p>
+</section>
+
+<section id="workflow-2" class="slide workflow cat-modules">
+    <p class="category">Modules</p>
+    <h2>5. Workflow</h2>
+    <ul>
+        <li>[Mostly] functional</li>
+        <li>Poor UI/UX</li>
+        <li>Outdated structure</li>
+        <li>Slow development (although improving)</li>
+    </ul>
+</section>
+
+<section id="workflow-3" class="slide workflow cat-modules">
+    <p class="category">Modules</p>
+    <h2>5. Workflow</h2>
+    <ul>
+        <li>Workbench Module
+            <ul>
+                <li><a href="https://drupal.org/project/workbench">https://drupal.org/project/workbench</a></li>
+                <li>Built with D7/Field API in mind</li>
+                <li>Better submodule separation (Access, Moderation, Files, Media)</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!--  Date  -->
+<section id="date-1" class="slide date cat-modules title">
+    <p class="category">Modules</p>
+    <h1>6. Date</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/joelanman/366190064">http://www.flickr.com/photos/joelanman/366190064</a></p>
+</section>
+
+<section id="date-2" class="slide date cat-modules">
+    <p class="category">Modules</p>
+    <h2>6. Date</h2>
+    <ul>
+        <li>Abandoned until last month</li>
+        <li>Still 1089 open issues & 567 bugs</li>
+    </ul>
+</section>
+
+<section id="date-3" class="slide date cat-modules">
+    <p class="category">Modules</p>
+    <h2>6. Date</h2>
+    <ul>
+        <li>No alternative</li>
+        <li>Search for similar issues when the arise</li>
+    </ul>
+</section>
+
+<!--  DRUPALISMS  -->
+<!--  Module All The Things  -->
+<section id="module-things-1" class="slide module-things cat-drupalisms title">
+    <p class="category">Drupalisms</p>
+    <h1>7. Module All The Things</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/37709691@N05/4852805286/">http://www.flickr.com/photos/37709691@N05/4852805286/</a></p>
+</section>
+
+<section id="module-things-2" class="slide module-things cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>7. Module All The Things</h2>
+    <ul>
+        <li>Large site can have >100 modules</li>
+        <li>Temptation to put every alter in separate module</li>
+    </ul>
+</section>
+
+<section id="module-things-3" class="slide module-things cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>7. Module All The Things</h2>
+    <ul>
+        <li>Group sensible changes together (especially Features)</li>
+        <li>Consider submodules</li>
+        <li>Use .inc files</li>
+        <li>Avoiding too many modules
+            <ul><li><a href="https://drupal.org/node/1141442">https://drupal.org/node/1141442</a></li></ul>
+        </li>
+        <li>Do you really need a whole module for one feature?</li>
+    </ul>
+</section>
+
+<!--  Hacking Core  -->
+<section id="hacking-core-1" class="slide hacking-core cat-drupalisms title">
+    <p class="category">Drupalisms</p>
+    <h1>8. Hacking Core (or Contrib)</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/meddygarnet/3451581786">http://www.flickr.com/photos/meddygarnet/3451581786</a></p>
+</section>
+
+<section id="hacking-core-2" class="slide hacking-core cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>8. Hacking Core (or Contrib)</h2>
+    <ul>
+        <li>Can't update</li>
+        <li>More likely to introduce security holes</li>
+        <li>Just don't do it</li>
+        <li><a href="https://drupal.org/best-practices/do-not-hack-core">https://drupal.org/best-practices/do-not-hack-core</a></li>
+    </ul>
+</section>
+
+<section id="hacking-core-3" class="slide hacking-core cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>8. Hacking Core (or Contrib)</h2>
+    <ul>
+        <li>Bugs happen</li>
+        <li>Create patches directory/file</li>
+        <li>All patches must have a d.o issue</li>
+        <li>Check back often</li>
+        <li>If specific use case add alter</li>
+    </ul>
+</section>
+
+<!--  Contrib  -->
+<section id="contrib-1" class="slide contrib cat-drupalisms title">
+    <p class="category">Drupalisms</p>
+    <h1>9. Contrib</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/jasonparis/4788901592">http://www.flickr.com/photos/jasonparis/4788901592</a></p>
+</section>
+
+<section id="contrib-2" class="slide contrib cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>9. Contrib</h2>
+    <ul>
+        <li>Difficult to find modules</li>
+        <li>Difficult to compare modules</li>
+        <li>Difficult/absent maintainers</li>
+    </ul>
+</section>
+
+<section id="contrib-3" class="slide contrib cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>9. Contrib</h2>
+    <ul>
+        <li>Check popular distributions
+            <!--<ul>-->
+                <!--<li><a href="https://drupal.org/project/commerce">https://drupal.org/project/commerce</a></li>-->
+                <!--<li><a href="https://drupal.org/project/openatrium">https://drupal.org/project/openatrium</a></li>-->
+                <!--<li><a href="https://drupal.org/project/commons">https://drupal.org/project/commons</a></li>-->
+            <!--</ul>-->
+        </li>
+        <li>Check most popular modules
+            <ul><li><a href="https://drupal.org/project/usage">https://drupal.org/project/usage</a></li></ul>
+        </li>
+        <li>Blog posts
+            <ul>
+                <li><a href="http://www.lullabot.com/taxonomy/term/1266">http://www.lullabot.com/taxonomy/term/1266</a></li>
+                <li><a href="http://www.drupalcommerce.org/blog/tagged/commerce-module-tuesday">http://www.drupalcommerce.org/blog/tagged/commerce-module-tuesday</a></li>
+            </ul>
+        </li>
+        <li>Podcasts
+            <ul><li><a href="https://modulesunraveled.com/">https://modulesunraveled.com/</a></li></ul>
+        </li>
+        <li>SimplyTest.me
+            <ul>
+                <li><a href="http://simplytest.me">http://simplytest.me</a></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<!--  Admin Area  -->
+<section id="admin-area-1" class="slide admin-area cat-drupalisms title">
+    <p class="category">Drupalisms</p>
+    <h1>10. Admin Area</h1>
+    <p class="source"><a href="http://www.flickr.com/photos/35565491@N03/3292423645">http://www.flickr.com/photos/35565491@N03/3292423645</a></p>
+</section>
+
+<section id="admin-area-2" class="slide admin-area cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>10. Admin Area</h2>
+    <ul>
+        <li>Hardcoded listing pages</li>
+        <li>Strange structure</li>
+        <li>Difficult to customise</li>
+    </ul>
+</section>
+
+<section id="admin-area-3" class="slide admin-area cat-drupalisms">
+    <p class="category">Drupalisms</p>
+    <h2>10. Admin Area</h2>
+    <ul>
+        <li>Admin Views module
+            <ul><li><a href="http://drupal.org/project/admin_views">http://drupal.org/project/admin_views</a></li></ul>
+        </li>
+        <li>Admin module
+            <ul><li><a href="https://drupal.org/project/admin">https://drupal.org/project/admin</a></li></ul>
+        </li>
+        <li>Admin Menu module
+            <ul><li><a href="https://drupal.org/project/admin_menu">https://drupal.org/project/admin_menu</a></li></ul>
+        </li>
+        <li>Module Filter module
+            <ul><li><a href="https://drupal.org/project/module_filter">https://drupal.org/project/module_filter</a></li></ul>
+        </li>
+        <li>Filter Permissions module
+            <ul><li><a href="https://drupal.org/project/filter_perms">https://drupal.org/project/filter_perms</a></li></ul>
+        </li>
+    </ul>
+</section>
+
+
+<!--  FINALLY  -->
+<!--  Code I've Written  -->
+<section id="my-code-1" class="slide my-code cat-finally">
+    <p class="category">Finally</p>
+    <h2>Code I've Written</h2>
+    <ul>
+        <li>Accept criticism</li>
+        <li>Encourage debate</li>
+        <li>Be bold</li>
+    </ul>
+</section>
+
+<!-- SUMMARY -->
+<section id="d8-summary" class="slide summary">
+    <p class="category">Summary</p>
+    <h2>D8 Summary</h2>
+    <ol>
+        <!--<h3>General</h3>-->
+        <li>Coding Standards - Big structural changes</li>
+        <li>Commit Size - Unaffected</li>
+        <li>Bad Commenting - More important (annotations, class discovery, etc)</li>
+        <li>Commented out code - Unaffected</li>
+        <!--<h3>Drupal Modules</h3>-->
+        <li>Field Collection - Please stop</li>
+        <li>Workflow - <a href="https://drupal.org/node/218755">State revisions in core</a>, <a href="https://groups.drupal.org/workflow">https://groups.drupal.org/workflow</a></li>
+        <li>Date - <a href="https://drupal.org/node/1802278">Date component</a> and <a href="https://drupal.org/node/501428">field</a> in core</li>
+        <!--<h3>Drupalisms</h3>-->
+        <li>Module All The Things - Some improvement in discussions</li>
+        <li>Contrib - Hopefully lose some in the process</li>
+        <li>Admin Area - Mobile improvements, List pages are Views</li>
+        <!--<h3>Finally</h3>-->
+        <li>Code I've Written - Always improving</li>
+    </ol>
+</section>
+
+<section id="questions" class="slide questions">
+    <h1>Questions?</h1>
+    <p>Leave Feedback: <a href="https://joind.in/10141">https://joind.in/10141</a><br />
+    <a href="http://twitter.com/justanothermark">@JustAnotherMark</a></p>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
